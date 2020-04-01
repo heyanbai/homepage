@@ -16,9 +16,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#project_lists").show();
+            $("#project_detail").hide();
+        });
+        $(document).ready(function(){
+            $(".card.shade").click(function(){
+                $("#project_detail").show();
+                $("#project_lists").hide();
+                $("#project_lists").animate({scrollTop:0}, 500);
+            });
+        });
+        $(document).ready(function(){
+            $("#return-btn").click(function(){
+                $("#project_detail").hide();
+                $("#project_lists").show();
+            });
+        });
+    </script>
     <div class="row top-buffer">
         <div class="col-2"></div>
         <div class="col-8">
@@ -46,6 +66,7 @@
                     <img src="images/face.JPG" class="rounded-circle " style="width: 100%;height: auto" alt="...">
                 </div>
             </div>
+<!--            Education-->
             <div class="row container-fluid subtitle">Education</div>
             <div class="row container-fluid education ">
                 <div class="col-3 d-flex  education align-items-center">
@@ -70,6 +91,7 @@
                         <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'">The First High School of Changsha，Hunan</i></p>
                 </div>
             </div>
+<!--            Experience-->
             <div class="row container-fluid subtitle">Experience</div>
             <div class="row container-fluid experience ">
                 <div class="col-3 d-flex  align-items-center">
@@ -90,15 +112,114 @@
                     </p>
                 </div>
             </div>
-<!--            <div class="row container-fluid subtitle">Projects</div>-->
-            <hr class="separator">
+<!--            Projects-->
+            <div class="row container-fluid subtitle">Projects</div>
+            <div class="row container-fluid project_row" id="project_lists">
+                <div class="container-fluid  card-columns" style="height: auto">
+                    <div class="card bg-dark text-white project-card shade" >
+                        <a href="###" class="stretched-link"></a>
+                        <img src="./demo/banana.gif" class="project-card-img" alt="...">
+                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
+                            <div class="outer">
+                                <div class="left">
+                                    <div class="project-name">Navigation</div>
+                                </div>
+                                <div class="right">
+                                    <div class="project-type border border-primary rounded">RL</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white project-card shade" >
+                        <a href="###" class="stretched-link"></a>
+                        <img src="./demo/deebrainMINA.gif" class="project-card-img" alt="...">
+                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
+                            <div class="outer">
+                                <div class="left">
+                                    <div class="project-name">DeeBrain Report</div>
+                                </div>
+                                <div class="right">
+                                    <div class="project-type border border-primary rounded">MINA</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white project-card shade" >
+                        <a href="###" class="stretched-link"></a>
+                        <img src="./images/face.JPG" class="project-card-img" alt="...">
+                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
+                            <div class="outer">
+                                <span class="project-name">Project Title </span>
+                                <div class="type-container">
+                                    <span class="project-type border border-primary rounded">RL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white project-card shade" >
+                        <a href="###" class="stretched-link"></a>
+                        <img src="./images/face.JPG" class="project-card-img" alt="...">
+                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
+                            <div class="outer">
+                                <span class="project-name">Project Title </span>
+                                <div class="type-container">
+                                    <span class="project-type border border-primary rounded">RL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white project-card shade" >
+                        <a href="###" class="stretched-link"></a>
+                        <img src="./images/face.JPG" class="project-card-img" alt="...">
+                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
+                            <div class="outer">
+                                <span class="project-name">Project Title </span>
+                                <div class="type-container">
+                                    <span class="project-type border border-primary rounded">RL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white project-card shade" >
+                        <a href="###" class="stretched-link"></a>
+                        <img src="./images/face.JPG" class="project-card-img" alt="...">
+                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
+                            <div class="outer">
+                                <span class="project-name">Project Title </span>
+                                <div class="type-container">
+                                    <span class="project-type border border-primary rounded">RL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container-fluid project_row" id="project_detail">
+                <div class="row btn-row container-fluid">
+                    <button type="button" class="btn btn-light" id="return-btn">←SHOW ALL PROJECTS</button>
+                    <div class="card mb-3">
+                        <img src="./demo/banana.gif" class="card-img-top" alt="...">
+                        <div class="card-body" style="margin-top: 10px">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+<!--            End-->
+            <div>
+                <hr class="row container-fluid separator">
+            </div>
             <div class="card mb-3">
                 <img src="images/myself.JPG" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text"><small class="text-muted">Last updated April 2020</small></p>
                 </div>
             </div>
-        <div class="col-2"></div>
+
     </div>
+        <div class="col-2"></div>
 </body>
 </html>

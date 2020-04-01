@@ -28,6 +28,7 @@
     font-family: "Adobe Kaiti Std";
 }
 .separator{
+    margin-top: 20px;
     border-top: 1px solid #8c8b8b;
 }
 .experience{
@@ -38,7 +39,90 @@
     font-weight: bold;
     font-size: 23px;
     font-family: "Kannada MN";
-    margin-top: 20px;
+
+    margin-bottom: 20px;
+}
+.btn-row{
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    width: 100%;
+}
+.project_row{
+    top: 0;
+}
+
+.project-card-img{
+    max-width:100%;
+    max-height:100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.project-card{
+    max-width:100%;
+    max-height:100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative
+}
+.card-img-overlay{
+    position: absolute;
+    height: 30px;
+    background-color: rgba(0,0,0,0.5);
+    top: unset;
+    bottom: 0;
+    padding: 0;
+}
+.outer{
+    position: relative;
+    height: 100%;
+    display:table;
+}
+.right{
+    text-align: right;
+    display: table-cell;
+}
+.left{
+    text-align: left;
+    display: table-cell;
+}
+.project-name{
+    vertical-align:middle;
+    text-align: center;
+    display: inline-block;
+    padding-left: 3%;
+    opacity: 1;
+    font-family: Andale Mono, monospace;
+    font-size: 10%;
+}
+.type-container{
+    right: 2px;
+    position: relative;
+    margin-top: 100%;
+    display:table-cell;
+    text-align: center;
+    vertical-align:middle;
+}
+.project-type{
+    margin-left: 5px;
+    display: inline-block;
+    text-align: center;
+    vertical-align:middle;
+    padding: 1px 6px 1px 6px;
+    font-family: Courier, monospace;
+    letter-spacing: 2px;
+    font-size: 11%;
+
+}
+.shade{
+    box-shadow: 0px 5px 7px grey;
 }
 .text-monospace{
     font-size: 32px;
