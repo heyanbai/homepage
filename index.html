@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yanbai He</title>
+    <title>欢迎访问Yanbai He的主页</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
             crossorigin="anonymous"></script>
@@ -21,40 +18,51 @@
 </head>
 <body>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $("#project_lists").show();
-            $("#project_detail").hide();
-        });
-        $(document).ready(function(){
-            $(".card.shade").click(function(){
-                $("#project_detail").show();
-                $("#project_lists").hide();
-                $("#project_lists").animate({scrollTop:0}, 500);
-            });
-        });
-        $(document).ready(function(){
-            $("#return-btn").click(function(){
-                $("#project_detail").hide();
-                $("#project_lists").show();
-            });
-        });
+        function changes() {
+            document.getElementById('x1').innerHTML = '?';
+            document.getElementById('x2').innerHTML = '?';
+        }
+        function solveEquations() {
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            var c = parseFloat(document.getElementById('c').value);
+
+            if (isNaN(a)){
+                alert("Please Input a !");
+            }else if (isNaN(b)){
+                alert("Please Input b !");
+            }else if (isNaN(c)){
+                alert("Please Input c !");
+            }else if (a === 0){
+                alert("a can't be 0 !");
+            }else if(b * b < 4 * a * c){
+                alert('There is no solution !');
+            }else{
+                var x1 = (-b - Math.sqrt(b * b - 4 * a * c))/2.0;
+                var x2 = (-b + Math.sqrt(b * b - 4 * a * c))/2.0;
+                document.getElementById('x1').innerHTML = x1;
+                document.getElementById('x2').innerHTML = x2;
+            }
+        }
     </script>
     <div class="row top-buffer">
         <div class="col-2"></div>
         <div class="col-8">
             <div class="row container-fluid align-items-center justify-content-center ">
-                <div class="col-7 ">
+                <div class="col-7">
                     <div class="text-center name">Yanbai He <span class="name_zh">何炎柏</span></div>
                     <div class="row ">
-                        <p>I am a third-year bachelor student at Computer Science Department, Nanjing University of Posts and Telecommunications.
-                            Since my sophomore year, I have been conducting research on computer vision under the guidance of <b>Prof. Bo Jiang</b>.
+                        <p>I am a third-year bachelor student at
+                            <a href="https://cs.njupt.edu.cn" class="btn-link">
+                                Computer Science Department, Nanjing University of Posts and Telecommunications
+                            </a>.
+                            Since my sophomore year, I have been conducting research on computer vision
+                            under the guidance of<b>Prof. Bo Jiang</b>.
                         </p>
-                        <p class="text-muted">I have been successfully selected by <a href="https://www.mitacs.ca/en" class="btn-link">Mitacs</a> and
-                            <a href="https://www.eng.mcmaster.ca/sept/people/faculty/zhen-gao" class="btn-link">Prof. Zhen Gao</a> from McMaster University to receive a
-                            2020 Globalink Research Internship award in the summer of 2020.
-                            <span class="bg-danger text-white ml-2 pl-1 pr-1">Canceled due to COVID-19 😥</span>
-                        </b>
-                        <p>My research interests lie primarily in the area of Computer Vision and Reinforcement Learning.</p>
+                        <p>
+                            My research interests lie primarily in the area of Computer Vision
+                            and Reinforcement Learning.
+                        </p>
                     </div>
                     <div class="text-center">
                         <a href="mailto:heyanbai@yahoo.com" class="btn-link">Email</a>/
@@ -64,6 +72,92 @@
                 </div>
                 <div class="col-5 text-center">
                     <img src="images/face.JPG" class="rounded-circle " style="width: 100%;height: auto" alt="...">
+                </div>
+            </div>
+<!--            For Web Skills Experiment-->
+            <div class="row container-fluid subtitle">More About Me</div>
+            <h5 class="info-title"><i>Education Story</i></h5>
+                <ol class="info">
+                    <li><b>2011.9 - 2014.6</b> Qingzhuhuxiangyi Foreign Language School</li>
+                    <li><b>2014.9 - 2017.6</b> The First High School of Changsha, Hunan</li>
+                    <li><b>2017.6 - 2021.9(Expected)</b> Computer Science Department,
+                        Nanjing University of Posts and Telecommunications</li>
+                </ol>
+            <h5 class="info-title"><i>Favorite Books</i></h5>
+                <ul class="info">
+                    <li>Romeo and Juliet</li>
+                    <li>Lord of the Rings</li>
+                    <li>Pride and Prejudice</li>
+                    <li>Animal Farm</li>
+                </ul>
+            <h5 class="info-title"><i>Hobbies</i></h5>
+                <ul class="info">
+                <li>Photography</li>
+                <li>Travel</li>
+                <li>Swimming</li>
+                <li>Programming</li>
+            </ul>
+            <h5 class="info-title"><i>Grades</i></h5>
+                <table class="info" border="1" cellspacing="0">
+                    <h6 class="info">Main Course Grades</h6>
+                    <tr>
+                        <th>Course Title</th>
+                        <th>Time</th>
+                        <th>Teacher</th>
+                        <th>Records</th>
+                    </tr>
+                    <tr>
+                        <td>Advanced Mathematics A(I)</td>
+                        <td>Fall, 2017</td>
+                        <td>Hongniu Zhao</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Mathematics A(II)</td>
+                        <td>Spring, 2018</td>
+                        <td>Xiaoyu Li</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Data Stucture</td>
+                        <td>Spring, 2018</td>
+                        <td>Bo Jiang</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Graphics</td>
+                        <td>Fall, 2019</td>
+                        <td>Rui Huang</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Linux Programming</td>
+                        <td>Fall, 2019</td>
+                        <td>Qiang Liu</td>
+                        <td>97</td>
+                    </tr>
+                </table>
+            <h5 class="info-title"><i>JavaScript Mini Program</i></h5>
+            <div class="">
+                <div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-26-Frame" style=""><nobr><span class="math" id="MathJax-Span-489" style="width: 10.266em; display: inline-block;"><span style="display: inline-block; position: relative; width: 9.234em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.474em, 1000em, 2.744em, -0.49em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-490"><span class="mi" id="MathJax-Span-491" style="font-family: STIXGeneral-Italic;">a</span><span class="mo" id="MathJax-Span-492" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">∗</span><span class="msubsup" id="MathJax-Span-493" style="padding-left: 0.25em;"><span style="display: inline-block; position: relative; width: 1.027em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.714em, -0.534em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-494" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.721em; left: 0.558em;"><span class="mn" id="MathJax-Span-495" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mo" id="MathJax-Span-496" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">+</span><span class="mi" id="MathJax-Span-497" style="font-family: STIXGeneral-Italic; padding-left: 0.25em;">b</span><span class="mo" id="MathJax-Span-498" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">∗</span><span class="mi" id="MathJax-Span-499" style="font-family: STIXGeneral-Italic; padding-left: 0.25em;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-500" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">+</span><span class="mi" id="MathJax-Span-501" style="font-family: STIXGeneral-Italic; padding-left: 0.25em;">c</span><span class="mo" id="MathJax-Span-502" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-503" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.159em; vertical-align: -0.108em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-26">
+                    a*x^2 + b*x + c = 0</script>
+                <div class="row ">
+                    <div class="col">a<input class="input-blank" type="number" id="a" onchange="changes()"/></div>
+                    <div class="col">b<input class="input-blank" type="number" id="b" onchange="changes()"/></div>
+                    <div class="col">c<input class="input-blank" type="number" id="c" onchange="changes()"/></div>
+                    <div class="col"><button onclick="solveEquations()">Solve Equations</button></div>
+                </div>
+                <div class="row ">
+                    <div class="col">
+                        <span class="MathJax" id="MathJax-Element-30-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-516" style="width: 2.266em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.027em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.853em, -0.534em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-517"><span class="msubsup" id="MathJax-Span-518"><span style="display: inline-block; position: relative; width: 0.973em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.714em, -0.534em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-519" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.504em;"><span class="mn" id="MathJax-Span-520" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mo" id="MathJax-Span-521" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.781em; vertical-align: -0.229em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-30">
+                        x_1 = </script>
+                        <label id="x1">?</label>
+                    </div>
+                    <div class="col">
+                        <span class="MathJax" id="MathJax-Element-31-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-522" style="width: 2.266em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.027em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.853em, -0.534em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-523"><span class="msubsup" id="MathJax-Span-524"><span style="display: inline-block; position: relative; width: 0.973em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.714em, -0.534em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-525" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.504em;"><span class="mn" id="MathJax-Span-526" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mo" id="MathJax-Span-527" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.781em; vertical-align: -0.229em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-31">
+                        x_2 = </script>
+                        <label id="x2">?</label>
+                    </div>
                 </div>
             </div>
 <!--            Education-->
@@ -106,109 +200,12 @@
                         <br><b>Best Engineering Award</b>
                         <br><a href="https://github.com/michaelliqx/Deecamp-MRI-Segmentation" class="btn-link">[code]</a>
                         <p class="school">
-                            We use machine learning techniques to label glioma in brain MR images, predict patient’s life span and
+                            We use machine learning techniques to label glioma in brain MR images,
+                            predict patient’s life span and
                             visualize tumor regions in 3D with a pathology report.
                         </p>
                     </p>
                 </div>
-            </div>
-<!--            Projects-->
-            <div class="row container-fluid subtitle">Projects</div>
-            <div class="row container-fluid project_row" id="project_lists">
-                <div class="container-fluid  card-columns" style="height: auto">
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./demo/banana.gif" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <div class="left">
-                                    <div class="project-name">Navigation</div>
-                                </div>
-                                <div class="right">
-                                    <div class="project-type border border-primary rounded">RL</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./demo/deebrainMINA.gif" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <div class="left">
-                                    <div class="project-name">DeeBrain Report</div>
-                                </div>
-                                <div class="right">
-                                    <div class="project-type border border-primary rounded">MINA</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./demo/reacher.gif" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <div class="left">
-                                    <div class="project-name">Reacher</div>
-                                </div>
-                                <div class="right">
-                                    <div class="project-type border border-primary rounded">RL</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./images/face.JPG" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <span class="project-name">Project Title </span>
-                                <div class="type-container">
-                                    <span class="project-type border border-primary rounded">RL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./images/face.JPG" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <span class="project-name">Project Title </span>
-                                <div class="type-container">
-                                    <span class="project-type border border-primary rounded">RL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./images/face.JPG" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <span class="project-name">Project Title </span>
-                                <div class="type-container">
-                                    <span class="project-type border border-primary rounded">RL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row container-fluid project_row" id="project_detail">
-                <div class="row btn-row container-fluid">
-                    <button type="button" class="btn btn-light" id="return-btn">←SHOW ALL PROJECTS</button>
-                    <div class="card mb-3">
-                        <img src="./demo/banana.gif" class="card-img-top" alt="...">
-                        <div class="card-body" style="margin-top: 10px">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 <!--            End-->
             <div>
@@ -220,8 +217,8 @@
                     <p class="card-text"><small class="text-muted">Last updated April 2020</small></p>
                 </div>
             </div>
-
-    </div>
+        </div>
         <div class="col-2"></div>
+    </div>
 </body>
 </html>

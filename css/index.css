@@ -102,6 +102,12 @@
     font-family: Andale Mono, monospace;
     font-size: 10%;
 }
+.info{
+    margin-left: 2%;
+}
+.info-title{
+    margin-top: 20px;
+}
 .type-container{
     right: 2px;
     position: relative;
@@ -109,6 +115,9 @@
     display:table-cell;
     text-align: center;
     vertical-align:middle;
+}
+.input-blank{
+    margin-left: 5px;
 }
 .project-type{
     margin-left: 5px;
