@@ -1,0 +1,18 @@
+{
+  "DeeBrainReport":{
+    "brief_intro":"",
+    "full_name":"Electronic Pathology Report on Wechat, based on segmentation result and brain template",
+    "title":"DEEBRAIN-REPORT","url_git":"","url_demo":"./demo/deebrainMINA.gif"
+  },
+  "Reacher":{
+    "brief_intro":"This project is a Pytorch implementation of DDPG(Deep Deterministic Policy Gradient) algorithm. <br><br> These agents use this method to learn actions at the same time, and PER(Prioritized Experience Replay) <br>is applied to accelerate the training process.",
+    "full_name":"Multiple Agents Learn To Reach Target Places",
+    "title":"REACHER","url_git":"","url_demo":"./demo/reacher.gif"},
+  "Navigation":{
+    "brief_intro":"Basic DQN(Deep Q-Networks) method is used to learn to control the agent's movement.  <br><br> Some improvements, such as Double DQN(DDQN) and Prioritized Experience Replay(Prioritized DQN),<br> are implemented to compare their performances on this task.",
+    "full_name":"An Intelligent Agent Try To Collect Good Bananas",
+    "title":"NAVIGATION",
+    "url_git":"https://github.com/BaldwinHe/ProfolioOfBai/tree/master/Reinforcement%20Learning/Navigation",
+    "url_demo":"./demo/banana.gif"
+  }
+}

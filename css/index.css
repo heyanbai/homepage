@@ -39,91 +39,75 @@
     font-weight: bold;
     font-size: 23px;
     font-family: "Kannada MN";
-
     margin-bottom: 20px;
 }
-.btn-row{
-    position: relative;
+#return-btn{
+    margin-top: 8px;
+    height: 70px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+#return-btn:hover{
+    margin-top: 8px;
+    height: 70px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: medium;
+    background-color: #D5DBDB;
+    margin-bottom: 10px;
+}
+.project-detail-row{
+    align-content: center;
+    align-items: flex-start;
+    child-align: left;
     top: 0;
-    bottom: 100%;
-    width: 100%;
-}
-.project_row{
-    top: 0;
-}
-
-.project-card-img{
-    max-width:100%;
-    max-height:100%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-}
-.project-card{
-    max-width:100%;
-    max-height:100%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: relative
-}
-.card-img-overlay{
-    position: absolute;
-    height: 30px;
-    background-color: rgba(0,0,0,0.5);
-    top: unset;
-    bottom: 0;
-    padding: 0;
-}
-.outer{
-    position: relative;
     height: 100%;
-    display:table;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    display: -webkit-flex;
+    background-color: #EAEDED;
+    padding-bottom: 20px;
 }
-.right{
-    text-align: right;
-    display: table-cell;
+.project-row{
+    align-content: center;
+    align-items: flex-start;
+    child-align: left;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    display: -webkit-flex;
 }
-.left{
-    text-align: left;
-    display: table-cell;
-}
-.project-name{
-    vertical-align:middle;
-    text-align: center;
-    display: inline-block;
-    padding-left: 3%;
-    opacity: 1;
-    font-family: Andale Mono, monospace;
-    font-size: 10%;
-}
-.type-container{
-    right: 2px;
-    position: relative;
-    margin-top: 100%;
-    display:table-cell;
-    text-align: center;
-    vertical-align:middle;
-}
-.project-type{
-    margin-left: 5px;
-    display: inline-block;
-    text-align: center;
-    vertical-align:middle;
-    padding: 1px 6px 1px 6px;
-    font-family: Courier, monospace;
+.project-btn{
+    font-weight: bold;
+    font-family: Marker Felt, fantasy;
     letter-spacing: 2px;
-    font-size: 11%;
+}
+.clickable {
+    cursor: pointer;
+}
 
+clickable:focus {
+    outline:none;
 }
-.shade{
-    box-shadow: 0px 5px 7px grey;
+
+#detail_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
-.text-monospace{
-    font-size: 32px;
+#detail_full_name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+#detail_breif_intro{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 14px;
 }

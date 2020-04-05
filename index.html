@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <title>Yanbai He</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.color.plus-names-2.1.2.min.js"></script>
+    <link rel="stylesheet" href="css/projectDetails.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/projectsContainer.css">
+    <link rel="stylesheet" href="css/label.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
             crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +28,7 @@
             $("#project_detail").hide();
         });
         $(document).ready(function(){
-            $(".card.shade").click(function(){
+            $(".project-card").click(function(){
                 $("#project_detail").show();
                 $("#project_lists").hide();
                 $("#project_lists").animate({scrollTop:0}, 500);
@@ -37,6 +39,40 @@
                 $("#project_detail").hide();
                 $("#project_lists").show();
             });
+        });
+        $(document).ready(function () {
+            $(".project-card").click(function () {
+                target = $(this).attr('about');
+                $.getJSON('detail.json', function (data) {
+                    var need = data[target];
+                    $('#detail_image').attr('src',need.url_demo);
+                    $('#detail_title').html(need.title);
+                    $('#detail_full_name').html(need.full_name);
+                    $('#detail_breif_intro').html(need.brief_intro);
+                    $('#project-url').attr("href",need.url_git);
+                })
+            })
+        })
+        $(document).ready(function () {
+            var select = $('.color-changer');
+            function changeColor() {
+                select.animate({'color':"#EF5350"},"slow");
+                select.animate({'color':"#F06292"},"slow");
+                select.animate({'color':'#BA68C8'},"slow");
+                select.animate({'color':'#9575CD'},"slow");
+                select.animate({'color':'#5C6BC0'},"slow");
+                select.animate({'color':'#29B6F6'},"slow");
+                select.animate({'color':'#26C6DA'},"slow");
+                select.animate({'color':'#26A69A'},"slow");
+                select.animate({'color':'#9CCC65'},"slow");
+                select.animate({'color':'#D4E157'},"slow");
+                select.animate({'color':'#F57F17'},"slow");
+                select.animate({'color':'#FFCA28'},"slow");
+                select.animate({'color':'#FF7043'},"slow");
+                select.animate({'color':'#8D6E63'},"slow");
+                select.animate({'color':'#78909C'},"slow");
+            }
+            setInterval(changeColor,0);
         });
     </script>
     <div class="row top-buffer">
@@ -53,7 +89,7 @@
                             <a href="https://www.eng.mcmaster.ca/sept/people/faculty/zhen-gao" class="btn-link">Prof. Zhen Gao</a> from McMaster University to receive a
                             2020 Globalink Research Internship award in the summer of 2020.
                             <span class="bg-danger text-white ml-2 pl-1 pr-1">Canceled due to COVID-19 😥</span>
-                        </b>
+                        </p>
                         <p>My research interests lie primarily in the area of Computer Vision and Reinforcement Learning.</p>
                     </div>
                     <div class="text-center">
@@ -114,114 +150,61 @@
             </div>
 <!--            Projects-->
             <div class="row container-fluid subtitle">Projects</div>
-            <div class="row container-fluid project_row" id="project_lists">
-                <div class="container-fluid  card-columns" style="height: auto">
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./demo/banana.gif" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <div class="left">
-                                    <div class="project-name">Navigation</div>
-                                </div>
-                                <div class="right">
-                                    <div class="project-type border border-primary rounded">RL</div>
-                                </div>
-                            </div>
+            <div class="row container-fluid project-row" id="project_lists">
+                <div class="projects-container">
+                    <div class="project-card clickable text-unselectable highlight-card" about="Navigation">
+                        <img class="project-image" alt="Navigation" src="./demo/banana.gif">
+                        <div class="info-bar">
+                            <div class="label-style">Navigation</div>
+                            <div><label class="label-minimal clickable label-style">RL</label></div>
                         </div>
                     </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./demo/deebrainMINA.gif" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <div class="left">
-                                    <div class="project-name">DeeBrain Report</div>
-                                </div>
-                                <div class="right">
-                                    <div class="project-type border border-primary rounded">MINA</div>
-                                </div>
-                            </div>
+                    <div class="project-card clickable text-unselectable highlight-card" about="DeeBrainReport">
+                        <img class="project-image" alt="DeeBrainReport" src="./demo/deebrainMINA.gif">
+                        <div class="info-bar">
+                            <div class="label-style">DeeBrain Report</div>
+                            <div><label class="label-minimal clickable label-style">MINA</label></div>
                         </div>
                     </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./demo/reacher.gif" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <div class="left">
-                                    <div class="project-name">Reacher</div>
-                                </div>
-                                <div class="right">
-                                    <div class="project-type border border-primary rounded">RL</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./images/face.JPG" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <span class="project-name">Project Title </span>
-                                <div class="type-container">
-                                    <span class="project-type border border-primary rounded">RL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./images/face.JPG" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <span class="project-name">Project Title </span>
-                                <div class="type-container">
-                                    <span class="project-type border border-primary rounded">RL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white project-card shade" >
-                        <a href="###" class="stretched-link"></a>
-                        <img src="./images/face.JPG" class="project-card-img" alt="...">
-                        <div class="card-img-overlay w-100 d-flex flex-column justify-content-end " >
-                            <div class="outer">
-                                <span class="project-name">Project Title </span>
-                                <div class="type-container">
-                                    <span class="project-type border border-primary rounded">RL</span>
-                                </div>
-                            </div>
+                    <div class="project-card clickable text-unselectable highlight-card" about="Reacher">
+                        <img class="project-image" alt="Reacher" src="./demo/reacher.gif">
+                        <div class="info-bar">
+                            <div class="label-style">Reacher</div>
+                            <div><label class="label-minimal clickable label-style">RL</label></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row container-fluid project_row" id="project_detail">
-                <div class="row btn-row container-fluid">
-                    <button type="button" class="btn btn-light" id="return-btn">←SHOW ALL PROJECTS</button>
-                    <div class="card mb-3">
-                        <img src="./demo/banana.gif" class="card-img-top" alt="...">
-                        <div class="card-body" style="margin-top: 10px">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-
+    </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row project-detail-row" id="project_detail">
+        <button type="button" class="btn" id="return-btn">SHOW ALL PROJECTS</button>
+        <div class="project-details-card">
+            <img src="./demo/banana.gif" class="project-details-image size" id="detail_image" alt="..." >
+            <div class="card-body" style="margin-top: 0px">
+                <span class="card-title" id="detail_title">title</span>
+                <p class="card-text" id="detail_full_name"></p>
+                <p class="card-text" id="detail_breif_intro"></p>
+                <a href="#" class="color-changer project-btn" style="text-decoration-line: none;" id="project-url" target="_blank">
+                    OPEN PROJECT
+                </a>
             </div>
-<!--            End-->
-            <div>
-                <hr class="row container-fluid separator">
-            </div>
+        </div>
+    </div>
+    <div class="row end">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <!--            End-->
+            <div><hr class="row container-fluid separator"></div>
             <div class="card mb-3">
                 <img src="images/myself.JPG" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Last updated April 2020</small></p>
+                    <p class="card-text"><small class="color-changer">Last updated April 2020</small></p>
                 </div>
             </div>
-
-    </div>
+        </div>
         <div class="col-2"></div>
+    </div>
 </body>
 </html>
