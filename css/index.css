@@ -56,6 +56,10 @@
     background-color: #D5DBDB;
     margin-bottom: 10px;
 }
+.myself{
+    border: 4px solid;
+    border-color: #4cae4c;
+}
 .project-detail-row{
     align-content: center;
     align-items: flex-start;
@@ -81,7 +85,7 @@
 }
 .project-btn{
     font-weight: bold;
-    font-family: Marker Felt, fantasy;
+    font-family: Luminari, fantasy;
     letter-spacing: 2px;
 }
 .clickable {
