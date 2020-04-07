@@ -50,7 +50,12 @@
                     $('#detail_title').html(need.title);
                     $('#detail_full_name').html(need.full_name);
                     $('#detail_breif_intro').html(need.brief_intro);
-                    $('#project-url').attr("href",need.url_git);
+                    if (need.url_git){
+                        $('#project-url').show()
+                        $('#project-url').attr("href",need.url_git);
+                    }else{
+                        $('#project-url').hide()
+                    }
                 })
             })
         })
@@ -133,7 +138,7 @@
             <div class="row container-fluid project-row" id="project_lists">
                 <div class="projects-container">
                     <div class="project-card clickable text-unselectable highlight-card" about="Cutout">
-                        <img class="project-image" alt="Reacher" src="./demo/Cutout.gif">
+                        <img class="project-image" alt="Reacher" src="./demo/cutout.gif">
                         <div class="info-bar">
                             <div class="label-style">Cutout</div>
                             <div><label class="label-minimal clickable label-style">CV</label></div>
@@ -165,7 +170,7 @@
                         <div class="info-bar">
                             <div class="label-style">Catch Tiger Chess</div>
                             <div>
-                                <label class="label-minimal clickable label-style">Course</label>
+                                <label class="label-minimal clickable label-style">Java</label>
                             </div>
                         </div>
                     </div>
@@ -174,7 +179,7 @@
                         <div class="info-bar">
                             <div class="label-style">WannaEat</div>
                             <div>
-                                <label class="label-minimal clickable label-style">Course</label>
+                                <label class="label-minimal clickable label-style">Android</label>
                             </div>
                         </div>
                     </div>
