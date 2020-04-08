@@ -4,6 +4,7 @@
     font-weight: 300;
     font-style: normal;
 }
+
 .top-buffer{
     margin-top: 15px;
 }
@@ -44,14 +45,14 @@
 #return-btn{
     margin-top: 8px;
     height: 70px;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: medium;
     margin-bottom: 10px;
 }
 #return-btn:hover{
     margin-top: 8px;
     height: 70px;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: medium;
     background-color: #D5DBDB;
     margin-bottom: 10px;
@@ -66,10 +67,6 @@
     child-align: left;
     top: 0;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    display: -webkit-flex;
     background-color: #EAEDED;
     padding-bottom: 20px;
 }
@@ -85,7 +82,7 @@
 }
 .project-btn{
     font-weight: bold;
-    font-family: Luminari, fantasy;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
 }
 .clickable {

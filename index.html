@@ -21,6 +21,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
     <script type="text/javascript">
@@ -61,10 +62,10 @@
         })
     </script>
     <div class="row top-buffer">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <div class="row container-fluid align-items-center justify-content-center ">
-                <div class="col-7 ">
+        <div class="col-lg-2 col-1"></div>
+        <div class="col-lg-8 col-10">
+            <div class="row align-items-center justify-content-center ">
+                <div class="col-lg-7 col-sm-10">
                     <div class="text-center name">Yanbai He <span class="name_zh">何炎柏</span></div>
                     <div class="row ">
                         <p>I am a third-year bachelor student at Computer Science Department, Nanjing University of Posts and Telecommunications.
@@ -83,16 +84,22 @@
                         <a href="https://github.com/BaldwinHe" class="btn-link">Github</a>
                     </div>
                 </div>
-                <div class="col-5 text-center">
+                <div class="col-5 text-center d-none d-xl-block d-lg-block">
                     <img src="images/face.JPG" class="rounded-circle myself color-changer" style="width: 100%;height: auto;" alt="...">
                 </div>
             </div>
-<!--            Education-->
-            <div class="row container-fluid subtitle">Education</div>
-            <div class="row container-fluid education ">
+        </div>
+        <div class="col-lg-2 col-1"></div>
+    </div>
+    <div class="row content-segment">
+        <div class="col-lg-2 col-1"></div>
+        <div class="col-lg-8 col-10">
+            <!--            Education-->
+            <div class="row subtitle">Education</div>
+            <div class="row education ">
                 <div class="col-3 d-flex  education align-items-center">
                     <div class="col-sm-6">
-                        <img src="images/njupt.jpeg" class="rounded-0" style="width: 90px;height: 90px" alt="...">
+                        <img src="images/njupt.jpeg" class="rounded-0" style=" width: 200%;height: auto;" alt="...">
                     </div>
                 </div>
                 <div class="col-9">
@@ -101,10 +108,10 @@
                     <p class="school">Bachelor of Science, Computer Science.</p>
                 </div>
             </div>
-            <div class="row container-fluid education ">
+            <div class="row education ">
                 <div class="col-3 d-flex  education align-items-center">
                     <div class="col-sm-6">
-                        <img src="images/first_high_school_changsha.png" class="rounded-0" style="width: 90px;height: 90px" alt="...">
+                        <img src="images/first_high_school_changsha.png" class="rounded-0" style="width: 200%;height: auto;" alt="...">
                     </div>
                 </div>
                 <div class="col-9 align-items-center">
@@ -112,13 +119,13 @@
                         <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'">The First High School of Changsha，Hunan</i></p>
                 </div>
             </div>
-<!--            Experience-->
-            <div class="row container-fluid subtitle">Experience</div>
-            <div class="row container-fluid experience ">
-                <div class="col-3 d-flex  align-items-center">
+            <!--            Experience-->
+            <div class="row subtitle">Experience</div>
+            <div class="row experience ">
+                <div class="col-lg-3 d-flex align-items-center">
                     <img src="demo/deebrain.gif" class="rounded-0" width=100%  alt="...">
                 </div>
-                <div class="col-9">
+                <div class="col-lg-9">
                     <p class="school">
                         <b>Intelligent diagnosis of 3D medical images</b>, Jul. 2019 - Aug. 2019 <br>
                         DeeCamp Summer Internship in <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'"> Sinovation Ventures AI Institute</i>
@@ -126,16 +133,16 @@
                         <br>Yuanzhe Li, Zhiming Hao, Kaixiang Lin, Jiequn Xu(Designer)
                         <br><b>Best Engineering Award</b>
                         <br><a href="https://github.com/michaelliqx/Deecamp-MRI-Segmentation" class="btn-link">[code]</a>
-                        <p class="school">
-                            We use machine learning techniques to label glioma in brain MR images, predict patient’s life span and
-                            visualize tumor regions in 3D with a pathology report.
-                        </p>
+                    <p class="school">
+                        We use machine learning techniques to label glioma in brain MR images, predict patient’s life span and
+                        visualize tumor regions in 3D with a pathology report.
+                    </p>
                     </p>
                 </div>
             </div>
-<!--            Projects-->
-            <div class="row container-fluid subtitle">Projects</div>
-            <div class="row container-fluid project-row" id="project_lists">
+            <!--            Projects-->
+            <div class="row subtitle">Projects</div>
+            <div class="row project-row" id="project_lists">
                 <div class="projects-container">
                     <div class="project-card clickable text-unselectable highlight-card" about="Cutout">
                         <img class="project-image" alt="Reacher" src="./demo/Cutout.gif">
@@ -185,26 +192,30 @@
                     </div>
                 </div>
             </div>
-    </div>
-        <div class="col-2"></div>
+        </div>
+        <div class="col-lg-2 col-1"></div>
     </div>
     <div class="row project-detail-row" id="project_detail">
-        <button type="button" class="btn" id="return-btn">SHOW ALL PROJECTS</button>
-        <div class="project-details-card">
-            <img src="./demo/banana.gif" class="project-details-image size" id="detail_image" alt="..." >
-            <div class="card-body" style="margin-top: 0px">
-                <span class="card-title" id="detail_title">title</span>
-                <p class="card-text" id="detail_full_name"></p>
-                <p class="card-text" id="detail_breif_intro"></p>
-                <a href="#" class="color-changer project-btn" style="text-decoration-line: none;" id="project-url" target="_blank">
-                    OPEN PROJECT
-                </a>
+        <div class="col-1"></div>
+        <div class="col-10">
+            <button type="button" class="btn" id="return-btn">SHOW ALL PROJECTS</button>
+            <div class="project-details-card">
+                <img src="./demo/banana.gif" class="project-details-image size" id="detail_image" alt="..." >
+                <div class="card-body" style="margin-top: 0px">
+                    <span class="card-title" id="detail_title">title</span>
+                    <p class="card-text" id="detail_full_name"></p>
+                    <p class="card-text" id="detail_breif_intro"></p>
+                    <a href="#" class="color-changer project-btn" style="text-decoration-line: none;" id="project-url" target="_blank">
+                        OPEN PROJECT
+                    </a>
+                </div>
             </div>
         </div>
+        <div class="col-1"></div>
     </div>
     <div class="row end">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-lg-2 col-1"></div>
+        <div class="col-lg-8 col-10">
             <!--            End-->
             <div><hr class="row container-fluid separator color-changer"></div>
             <div class="card mb-3">
@@ -213,7 +224,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-2"></div>
+        <div class="col-lg-2 col-1"></div>
     </div>
 </body>
 </html>
