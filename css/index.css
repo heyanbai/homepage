@@ -4,13 +4,51 @@
     font-weight: 300;
     font-style: normal;
 }
-
-.top-buffer{
-    margin-top: 15px;
+/*body {*/
+/*    !*position: relative;*!*/
+/*    padding-top: 40px;*/
+/*}*/
+.navbar{
+    background-color: rgba(255,0,0,0.1);
 }
-.name{
+.fixed-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.bar-text{
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-size: 8px;
+}
+.bar-link-text{
+    color: black;
+}
+.nav-pills > li > a.active{
+    background-color:#46b3e6 !important;
+    color:white !important;
+}
+.bar-link-text:hover{
+    color: black;
+    background-color: #F4F6F6 ;
+}
+.top-buffer{
+    margin-top: 40px;
+}
+.name-desktop{
     font-size: 34px;
     font-family: OCR A Std, monospace;
+}
+.name-phone-last{
+    color: #28B463 ;
+}
+.name-phone{
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 .school{
     font-size: 14px;
@@ -24,7 +62,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.name_zh{
+.name-desktop_zh{
     font-size: 32px;
     font-family: "Adobe Kaiti Std";
 }

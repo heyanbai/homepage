@@ -23,8 +23,14 @@
     <link href="css/index.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="0" >
     <script type="text/javascript">
+        $('body').scrollspy({ target: '#navbar' })
+        $('[data-spy="scroll"]').each(function () {
+            var $spy = $(this).scrollspy('refresh')
+        })
+        $("body").scrollspy()
+        $("body").on("activate.bs.scrollspy",function(){})
         $(document).ready(function(){
             $("#project_lists").show();
             $("#project_detail").hide();
@@ -61,170 +67,191 @@
             })
         })
     </script>
-    <div class="row top-buffer">
-        <div class="col-lg-2 col-1"></div>
-        <div class="col-lg-8 col-10">
-            <div class="row align-items-center justify-content-center ">
-                <div class="col-lg-7 col-sm-10">
-                    <div class="text-center name">Yanbai He <span class="name_zh">何炎柏</span></div>
-                    <div class="row ">
-                        <p>I am a third-year bachelor student at Computer Science Department, Nanjing University of Posts and Telecommunications.
-                            Since my sophomore year, I have been conducting research on computer vision under the guidance of <b>Prof. Bo Jiang</b>.
-                        </p>
-                        <p class="text-muted">I have been successfully selected by <a href="https://www.mitacs.ca/en" class="btn-link">Mitacs</a> and
-                            <a href="https://www.eng.mcmaster.ca/sept/people/faculty/zhen-gao" class="btn-link">Prof. Zhen Gao</a> from McMaster University to receive a
-                            2020 Globalink Research Internship award in the summer of 2020.
-                            <span class="bg-danger text-white ml-2 pl-1 pr-1">Canceled due to COVID-19 😥</span>
-                        </p>
-                        <p>My research interests lie primarily in the area of Computer Vision and Reinforcement Learning.</p>
+<!--        <nav class="navbar navbar-light  justify-content-center fixed-top bar-text" id="navbar">-->
+<!--            <ul class="nav nav-pills" role="tablist">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link bar-link-text active" href="#about">ABOUT</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link bar-link-text" href="#education">EDUCATION</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link bar-link-text" href="#experience">EXPERIENCE</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link bar-link-text" href="#work">WORK</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+    <div class="container">
+        <div class="row top-buffer" >
+            <div class="col-lg-2 col-1"></div>
+            <div class="col-lg-8 col-10">
+                <div class="row align-items-center justify-content-center ">
+                    <div class="col-lg-7 col-sm-10">
+                        <div class="text-center name-desktop d-none d-lg-block">Yanbai He <span class="name-desktop_zh">何炎柏</span></div>
+                        <div class="row">
+                            <div class="text-left name-phone d-lg-none">I'M <span class="name-phone-last">YANBAI</span> HE</div>
+                        </div>
+                        <div class="row ">
+                            <p>I am a third-year bachelor student at Computer Science Department, Nanjing University of Posts and Telecommunications.
+                                Since my sophomore year, I have been conducting research on computer vision under the guidance of <b>Prof. Bo Jiang</b>.
+                            </p>
+                            <p class="text-muted">I have been successfully selected by <a href="https://www.mitacs.ca/en" class="btn-link">Mitacs</a> and
+                                <a href="https://www.eng.mcmaster.ca/sept/people/faculty/zhen-gao" class="btn-link">Prof. Zhen Gao</a> from McMaster University to receive a
+                                2020 Globalink Research Internship award in the summer of 2020.
+                                <span class="bg-danger text-white ml-2 pl-1 pr-1">Canceled due to COVID-19 😥</span>
+                            </p>
+                            <p>My research interests lie primarily in the area of Computer Vision and Reinforcement Learning.</p>
+                        </div>
+                        <div class="text-center">
+                            <a href="mailto:heyanbai@yahoo.com" class="btn-link">Email</a>/
+                            <a href="https://www.linkedin.com/in/yanbai-he-a76804169/" class="btn-link">LinkedIn</a>/
+                            <a href="https://github.com/BaldwinHe" class="btn-link">Github</a>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <a href="mailto:heyanbai@yahoo.com" class="btn-link">Email</a>/
-                        <a href="https://www.linkedin.com/in/yanbai-he-a76804169/" class="btn-link">LinkedIn</a>/
-                        <a href="https://github.com/BaldwinHe" class="btn-link">Github</a>
+                    <div class="col-5 text-center d-none d-xl-block d-lg-block">
+                        <img src="images/face.JPG" class="rounded-circle myself color-changer" style="width: 100%;height: auto;" alt="...">
                     </div>
-                </div>
-                <div class="col-5 text-center d-none d-xl-block d-lg-block">
-                    <img src="images/face.JPG" class="rounded-circle myself color-changer" style="width: 100%;height: auto;" alt="...">
                 </div>
             </div>
+            <div class="col-lg-2 col-1"></div>
         </div>
-        <div class="col-lg-2 col-1"></div>
-    </div>
-    <div class="row content-segment">
-        <div class="col-lg-2 col-1"></div>
-        <div class="col-lg-8 col-10">
-            <!--            Education-->
-            <div class="row subtitle">Education</div>
-            <div class="row education ">
-                <div class="col-3 d-flex  education align-items-center">
-                    <div class="col-sm-6">
-                        <img src="images/njupt.jpeg" class="rounded-0" style=" width: 200%;height: auto;" alt="...">
-                    </div>
-                </div>
-                <div class="col-9">
-                    <p class="school"><b>Sept. 2017 - Jul. 2021 (Expected)</b>, Computer Science Department,
-                        <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'">Nanjing University of Posts and Telecommunications</i></p>
-                    <p class="school">Bachelor of Science, Computer Science.</p>
-                </div>
-            </div>
-            <div class="row education ">
-                <div class="col-3 d-flex  education align-items-center">
-                    <div class="col-sm-6">
-                        <img src="images/first_high_school_changsha.png" class="rounded-0" style="width: 200%;height: auto;" alt="...">
-                    </div>
-                </div>
-                <div class="col-9 align-items-center">
-                    <p class="school"><b>Sept. 2014 - Jul. 2017</b>,
-                        <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'">The First High School of Changsha，Hunan</i></p>
-                </div>
-            </div>
-            <!--            Experience-->
-            <div class="row subtitle">Experience</div>
-            <div class="row experience ">
-                <div class="col-lg-3 d-flex align-items-center">
-                    <img src="demo/deebrain.gif" class="rounded-0" width=100%  alt="...">
-                </div>
-                <div class="col-lg-9">
-                    <p class="school">
-                        <b>Intelligent diagnosis of 3D medical images</b>, Jul. 2019 - Aug. 2019 <br>
-                        DeeCamp Summer Internship in <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'"> Sinovation Ventures AI Institute</i>
-                        <br>QingXing Li, Fei Wang, Tao Song, Yu Liang , <b>Yanbai He</b>, Kongya Zhao, Yuanfang Qiao,
-                        <br>Yuanzhe Li, Zhiming Hao, Kaixiang Lin, Jiequn Xu(Designer)
-                        <br><b>Best Engineering Award</b>
-                        <br><a href="https://github.com/michaelliqx/Deecamp-MRI-Segmentation" class="btn-link">[code]</a>
-                    <p class="school">
-                        We use machine learning techniques to label glioma in brain MR images, predict patient’s life span and
-                        visualize tumor regions in 3D with a pathology report.
-                    </p>
-                    </p>
-                </div>
-            </div>
-            <!--            Projects-->
-            <div class="row subtitle">Projects</div>
-            <div class="row project-row" id="project_lists">
-                <div class="projects-container">
-                    <div class="project-card clickable text-unselectable highlight-card" about="Cutout">
-                        <img class="project-image" alt="Reacher" src="./demo/Cutout.gif">
-                        <div class="info-bar">
-                            <div class="label-style">Cutout</div>
-                            <div><label class="label-minimal clickable label-style">CV</label></div>
+        <div class="row content-segment">
+            <div class="col-lg-2 col-1"></div>
+            <div class="col-lg-8 col-10">
+                <!--            Education-->
+                <div class="row subtitle" id="education">Education</div>
+                <div class="row education ">
+                    <div class="col-3 d-flex  education align-items-center">
+                        <div class="col-sm-6">
+                            <img src="images/njupt.jpeg" class="rounded-0" style=" width: 200%;height: auto;" alt="...">
                         </div>
                     </div>
-                    <div class="project-card clickable text-unselectable highlight-card" about="Reacher">
-                        <img class="project-image" alt="Reacher" src="./demo/reacher.gif">
-                        <div class="info-bar">
-                            <div class="label-style">Reacher</div>
-                            <div><label class="label-minimal clickable label-style">RL</label></div>
+                    <div class="col-9">
+                        <p class="school"><b>Sept. 2017 - Jul. 2021 (Expected)</b>, Computer Science Department,
+                            <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'">Nanjing University of Posts and Telecommunications</i></p>
+                        <p class="school">Bachelor of Science, Computer Science.</p>
+                    </div>
+                </div>
+                <div class="row education ">
+                    <div class="col-3 d-flex  education align-items-center">
+                        <div class="col-sm-6">
+                            <img src="images/first_high_school_changsha.jpg" class="rounded-0" style="width: 200%;height: auto;" alt="...">
                         </div>
                     </div>
-                    <div class="project-card clickable text-unselectable highlight-card" about="Navigation">
-                        <img class="project-image" alt="Navigation" src="./demo/banana.gif">
-                        <div class="info-bar">
-                            <div class="label-style">Navigation</div>
-                            <div><label class="label-minimal clickable label-style">RL</label></div>
-                        </div>
+                    <div class="col-9 align-items-center">
+                        <p class="school"><b>Sept. 2014 - Jul. 2017</b>,
+                            <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'">The First High School of Changsha，Hunan</i></p>
                     </div>
-                    <div class="project-card clickable text-unselectable normal-card" about="DeeBrainReport">
-                        <img class="project-image" alt="DeeBrainReport" src="./demo/deebrainMINA.gif">
-                        <div class="info-bar">
-                            <div class="label-style">DeeBrain Report</div>
-                            <div><label class="label-minimal clickable label-style">MINA</label></div>
-                        </div>
+                </div>
+                <!--            Experience-->
+                <div class="row subtitle" id="experience">Experience</div>
+                <div class="row experience ">
+                    <div class="col-lg-3 d-flex align-items-center">
+                        <img src="demo/deebrain.gif" class="rounded-0" width=100%  alt="...">
                     </div>
-                    <div class="project-card clickable text-unselectable normal-card" about="CatchTigerChess">
-                        <img class="project-image" alt="CatchTigerChess" src="./demo/CatchTigerChess.png">
-                        <div class="info-bar">
-                            <div class="label-style">Catch Tiger Chess</div>
-                            <div>
-                                <label class="label-minimal clickable label-style">Java</label>
+                    <div class="col-lg-9">
+                        <p class="school">
+                            <b>Intelligent diagnosis of 3D medical images</b>, Jul. 2019 - Aug. 2019 <br>
+                            DeeCamp Summer Internship in <i style="font-weight: bolder;font-family: 'Apple SD Gothic Neo'"> Sinovation Ventures AI Institute</i>
+                            <br>QingXing Li, Fei Wang, Tao Song, Yu Liang , <b>Yanbai He</b>, Kongya Zhao, Yuanfang Qiao,
+                            <br>Yuanzhe Li, Zhiming Hao, Kaixiang Lin, Jiequn Xu(Designer)
+                            <br><b>Best Engineering Award</b>
+                            <br><a href="https://github.com/michaelliqx/Deecamp-MRI-Segmentation" class="btn-link">[code]</a>
+                        <p class="school">
+                            We use machine learning techniques to label glioma in brain MR images, predict patient’s life span and
+                            visualize tumor regions in 3D with a pathology report.
+                        </p>
+                        </p>
+                    </div>
+                </div>
+                <!--            Work-->
+                <div class="row subtitle" id="work">work</div>
+                <div class="row project-row" id="project_lists">
+                    <div class="projects-container">
+                        <div class="project-card clickable text-unselectable highlight-card" about="Cutout">
+                            <img class="project-image" alt="Reacher" src="./demo/Cutout.gif">
+                            <div class="info-bar">
+                                <div class="label-style">Cutout</div>
+                                <div><label class="label-minimal clickable label-style">CV</label></div>
+                            </div>
+                        </div>
+                        <div class="project-card clickable text-unselectable highlight-card" about="Reacher">
+                            <img class="project-image" alt="Reacher" src="./demo/reacher.gif">
+                            <div class="info-bar">
+                                <div class="label-style">Reacher</div>
+                                <div><label class="label-minimal clickable label-style">RL</label></div>
+                            </div>
+                        </div>
+                        <div class="project-card clickable text-unselectable highlight-card" about="Navigation">
+                            <img class="project-image" alt="Navigation" src="./demo/banana.gif">
+                            <div class="info-bar">
+                                <div class="label-style">Navigation</div>
+                                <div><label class="label-minimal clickable label-style">RL</label></div>
+                            </div>
+                        </div>
+                        <div class="project-card clickable text-unselectable normal-card" about="DeeBrainReport">
+                            <img class="project-image" alt="DeeBrainReport" src="./demo/deebrainMINA.gif">
+                            <div class="info-bar">
+                                <div class="label-style">DeeBrain Report</div>
+                                <div><label class="label-minimal clickable label-style">MINA</label></div>
+                            </div>
+                        </div>
+                        <div class="project-card clickable text-unselectable normal-card" about="CatchTigerChess">
+                            <img class="project-image" alt="CatchTigerChess" src="./demo/CatchTigerChess.png">
+                            <div class="info-bar">
+                                <div class="label-style">Catch Tiger Chess</div>
+                                <div>
+                                    <label class="label-minimal clickable label-style">Java</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card clickable text-unselectable normal-card" about="WannaEat">
+                            <img class="project-image" alt="CatchTigerChess" src="./demo/WannaEat.JPG">
+                            <div class="info-bar">
+                                <div class="label-style">WannaEat</div>
+                                <div>
+                                    <label class="label-minimal clickable label-style">Android</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card clickable text-unselectable normal-card" about="WannaEat">
-                        <img class="project-image" alt="CatchTigerChess" src="./demo/WannaEat.JPG">
-                        <div class="info-bar">
-                            <div class="label-style">WannaEat</div>
-                            <div>
-                                <label class="label-minimal clickable label-style">Android</label>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-1"></div>
+        </div>
+        <div class="row project-detail-row" id="project_detail">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <button type="button" class="btn" id="return-btn">SHOW ALL PROJECTS</button>
+                <div class="project-details-card">
+                    <img src="./demo/banana.gif" class="project-details-image size" id="detail_image" alt="..." >
+                    <div class="card-body" style="margin-top: 0;">
+                        <span class="card-title" id="detail_title">title</span>
+                        <p class="card-text" id="detail_full_name"></p>
+                        <p class="card-text" id="detail_breif_intro"></p>
+                        <a href="#" class="color-changer project-btn" style="text-decoration-line: none;" id="project-url" target="_blank">
+                            OPEN PROJECT
+                        </a>
                     </div>
                 </div>
             </div>
+            <div class="col-1"></div>
         </div>
-        <div class="col-lg-2 col-1"></div>
-    </div>
-    <div class="row project-detail-row" id="project_detail">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <button type="button" class="btn" id="return-btn">SHOW ALL PROJECTS</button>
-            <div class="project-details-card">
-                <img src="./demo/banana.gif" class="project-details-image size" id="detail_image" alt="..." >
-                <div class="card-body" style="margin-top: 0px">
-                    <span class="card-title" id="detail_title">title</span>
-                    <p class="card-text" id="detail_full_name"></p>
-                    <p class="card-text" id="detail_breif_intro"></p>
-                    <a href="#" class="color-changer project-btn" style="text-decoration-line: none;" id="project-url" target="_blank">
-                        OPEN PROJECT
-                    </a>
+        <div class="row end">
+            <div class="col-lg-2 col-1"></div>
+            <div class="col-lg-8 col-10">
+                <!--            End-->
+                <div><hr class="row container-fluid separator color-changer"></div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="card-text"><small class="color-changer">Last updated April 2020</small></p>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-2 col-1"></div>
         </div>
-        <div class="col-1"></div>
-    </div>
-    <div class="row end">
-        <div class="col-lg-2 col-1"></div>
-        <div class="col-lg-8 col-10">
-            <!--            End-->
-            <div><hr class="row container-fluid separator color-changer"></div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <p class="card-text"><small class="color-changer">Last updated April 2020</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-1"></div>
     </div>
 </body>
 </html>
